@@ -1,0 +1,21 @@
+{
+  "name": "web-portfolio",
+  "description": "website-portfolio of web-based projects",
+  "main": "app.js",
+  "authors": [
+    "Nadya Eidelstein"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Yabloko28/webPortfolio",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4"
+  }
+}

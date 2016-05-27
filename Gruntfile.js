@@ -2,6 +2,14 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
+		/** Bower concat task*/
+
+		bower_concat: {
+			all: {
+				dest: 'scripts/_bower.js'
+			}
+		},
+
 		/** Concatination task*/
 
 		concat: {
@@ -79,7 +87,7 @@ module.exports = function(grunt) {
         		files: ['*.html',
         		        'sass/*.scss',
         		        'js/*.js'],
-        		tasks: ['concat', 'sass', 'autoprefixer', 'connect']
+        		tasks: ['bower_concat', 'concat', 'sass', 'autoprefixer', 'connect']
         	}
         }
 
@@ -90,8 +98,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-bower-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 
-	grunt.registerTask('default', ['concat', 'sass', 'autoprefixer', 'connect', 'watch']);
+	grunt.registerTask('default', ['bower_concat', 'concat', 'sass', 'autoprefixer', 'connect', 'watch']);
 }
