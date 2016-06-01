@@ -396,4 +396,113 @@ th {
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Maven Pro', sans-serif;
+  line-height: 1.5em;
+  color: #0a0a0a;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 5em;
+  text-align: center;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: #d7ee85;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 3em;
+  margin-bottom: 1rem;
+}
+
+.info p {
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+}
+
+body {
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+}
+
+header {
+  position: relative;
+  z-index: 10;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.about, .skills, .portfolio, .contact {
+  position: relative;
+  z-index: 10;
+  background: #f3f6f2;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  padding: 3em;
+}
+
+.about .container-about {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 2em;
+}
+.about .container-about p {
+  flex: 2;
+}
+.about .container-about .my-image {
+  width: 2em;
+  flex: 1;
+  margin-left: 3em;
+}
+.about .container-about .my-image img {
+  width: 100%;
+  height: auto;
+}
+
+.skills .container-skills {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+}
+.skills .container-skills .programming, .skills .container-skills .web-workflow, .skills .container-skills .softwares {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 1.5em;
+}
+.skills .container-skills .programming li, .skills .container-skills .web-workflow li, .skills .container-skills .softwares li {
+  margin: 0 1.25em 1.5em 1.25em;
+}
+.skills .container-skills .programming li img, .skills .container-skills .web-workflow li img, .skills .container-skills .softwares li img {
+  width: 4em;
 }

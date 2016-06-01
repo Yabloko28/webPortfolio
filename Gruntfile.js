@@ -66,28 +66,27 @@ module.exports = function(grunt) {
 
         /** Reload task*/
 
-        connect: {
-        	sever: {
-        		options: {
-        			hostname: 'localhost',
-        			port: 3000,
-        			livereload:true
-        		}
-        	}
-        },
+        // connect: {
+        // 	sever: {
+        // 		options: {
+        // 			hostname: 'localhost',
+        // 			port: 3000,
+        // 			livereload:true
+        // 		}
+        // 	}
+        // },
 
         /** Watch task*/
 
         watch: {
         	options: {
-        		spawn: false,
-        		livereload: true
+        		spawn: false
         	},
         	scripts: {
         		files: ['*.html',
         		        'sass/*.scss',
         		        'js/*.js'],
-        		tasks: ['bower_concat', 'concat', 'sass', 'autoprefixer', 'connect']
+        		tasks: ['bower_concat', 'concat', 'sass', 'autoprefixer']
         	}
         }
 
@@ -102,5 +101,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 
-	grunt.registerTask('default', ['bower_concat', 'concat', 'sass', 'autoprefixer', 'connect', 'watch']);
+	grunt.registerTask('default', ['bower_concat', 'concat', 'sass', 'autoprefixer', 'watch']);
 }
