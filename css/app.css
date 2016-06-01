@@ -409,6 +409,10 @@ html {
   box-sizing: inherit;
 }
 
+a, a:visited, a:active, a:hover {
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu', sans-serif;
   margin: 0;
@@ -418,21 +422,24 @@ h1 {
   font-size: 5em;
   text-align: center;
   width: 60%;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin: 6rem 20% 4rem 20%;
   color: #d7ee85;
-  margin-bottom: 1em;
 }
 
 h2 {
+  background: #f3f6f2;
+  border-radius: 1rem 1rem 0 0;
+  position: absolute;
+  height: 6rem;
   font-size: 3em;
-  margin-bottom: 1rem;
+  padding: 1rem 3rem;
 }
 
 .info p {
   width: 50%;
   margin-left: 25%;
   text-align: center;
+  margin-bottom: 8rem;
 }
 
 body {
@@ -449,11 +456,46 @@ canvas {
 }
 
 header {
+  height: 100vh;
   position: relative;
   z-index: 10;
 }
+header nav {
+  background: #f3f6f2;
+  display: flex;
+  flex-direction: row;
+  padding: 0 2rem;
+}
+header nav .menu {
+  display: flex;
+  flex-direction: row;
+}
+header nav .menu li {
+  padding: 0.5rem 1.5rem;
+}
+header nav .menu li:hover {
+  background: #46defe;
+  font-weight: 700;
+  color: #f3f6f2;
+}
+header nav .social-media {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 1rem;
+}
+header nav .social-media li {
+  margin-right: 2rem;
+}
+header nav .social-media li img {
+  width: 2rem;
+}
+header nav .social-media li:last-child {
+  margin-right: 0;
+}
 
 main {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -461,22 +503,26 @@ main {
 .about, .skills, .portfolio, .contact {
   position: relative;
   z-index: 10;
-  background: #f3f6f2;
   width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  border-radius: 1em;
-  margin-bottom: 2em;
+  margin: 0 10% 2em 10%;
+}
+
+.container-about, .container-skills, .works {
+  margin-top: 6rem;
+  background: #f3f6f2;
   padding: 3em;
+  border-radius: 0 1rem 1rem 1rem;
 }
 
 .about .container-about {
   display: flex;
   justify-content: flex-start;
-  padding-left: 2em;
 }
 .about .container-about p {
   flex: 2;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 .about .container-about .my-image {
   width: 2em;
@@ -484,16 +530,20 @@ main {
   margin-left: 3em;
 }
 .about .container-about .my-image img {
+  border-radius: 0.5rem;
   width: 100%;
   height: auto;
 }
 
 .skills .container-skills {
+  background: #f3f6f2;
   display: flex;
   flex-direction: column;
   padding-left: 2em;
 }
 .skills .container-skills .programming, .skills .container-skills .web-workflow, .skills .container-skills .softwares {
+  background-color: white;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -501,8 +551,66 @@ main {
   padding-top: 1.5em;
 }
 .skills .container-skills .programming li, .skills .container-skills .web-workflow li, .skills .container-skills .softwares li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   margin: 0 1.25em 1.5em 1.25em;
 }
+.skills .container-skills .programming li h4, .skills .container-skills .web-workflow li h4, .skills .container-skills .softwares li h4 {
+  order: 1;
+  font-weight: 500;
+}
 .skills .container-skills .programming li img, .skills .container-skills .web-workflow li img, .skills .container-skills .softwares li img {
+  order: 0;
   width: 4em;
+}
+
+.portfolio .works {
+  background: #f3f6f2;
+}
+.portfolio .works li {
+  padding: 2rem 0 4rem 0;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px black solid;
+  flex-wrap: wrap;
+}
+.portfolio .works li .project-image {
+  flex: 1;
+}
+.portfolio .works li .project-image img {
+  width: 100%;
+}
+.portfolio .works li .project-info {
+  flex: 3;
+}
+.portfolio .works li .project-info .description {
+  margin-bottom: 3rem;
+}
+.portfolio .works li .project-info .tools {
+  font-style: italic;
+}
+.portfolio .works li .project-info .button {
+  background: #d7ee85;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+.portfolio .works li:first-child {
+  padding-top: 0;
+}
+.portfolio .works li:nth-child(odd) .project-image {
+  order: 0;
+  margin-right: 3rem;
+}
+.portfolio .works li:nth-child(odd) .project-info {
+  order: 1;
+}
+.portfolio .works li:nth-child(even) .project-image {
+  order: 1;
+  margin-left: 3rem;
+}
+.portfolio .works li:nth-child(even) .project-info {
+  order: 0;
 }

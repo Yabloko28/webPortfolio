@@ -14,6 +14,10 @@ html {
   box-sizing: inherit;
 }
 
+a, a:visited, a:active, a:hover {
+	text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
@@ -23,15 +27,17 @@ h1 {
 	font-size: 5em;
     text-align: center;
     width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin: 6rem 20% 4rem 20%;
     color: $main-color;
-    margin-bottom: 1em;
 }
 
 h2 {
+    background: $background-color;
+    border-radius: 1rem 1rem 0 0;
+    position: absolute;
+    height: 6rem;
     font-size: 3em;
-    margin-bottom: 1rem;
+    padding: 1rem 3rem;
 }
 
 .info {
@@ -39,6 +45,7 @@ h2 {
 		width: 50%;
         margin-left: 25%;
         text-align: center;
+        margin-bottom: 8rem;
 
 	}
 }
@@ -57,12 +64,46 @@ canvas {
 }
 
 header {
+	height: 100vh;
     position: relative;
 	z-index: 10;
-
+	nav {
+		background: $background-color;
+		display: flex;
+		flex-direction: row;
+		padding: 0 2rem;
+		.menu {
+			display: flex;
+			flex-direction: row;
+			li {
+				padding: 0.5rem 1.5rem;
+			}
+			li:hover {
+				background: $active;
+				font-weight: 700;
+				color: $background-color;
+			}
+		}
+		.social-media {
+			margin-left: auto;
+			display: flex;
+			flex-direction: row;
+			padding: 0.5rem 1rem;
+			li {
+				margin-right: 2rem;
+				img {
+					width: 2rem;
+				}
+			}
+			li:last-child {
+				margin-right: 0;
+			}
+		}
+	}
 }
 
 main {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 }
@@ -70,27 +111,32 @@ main {
 .about, .skills, .portfolio, .contact {
 	position: relative;
 	z-index: 10;
-	background: $background-color;
 	width: 80%;
-	margin-left: 10%;
-	margin-right: 10%;
-	border-radius: 1em;
-	margin-bottom: 2em;
-	padding: 3em;
+	margin: 0 10% 2em 10%;
 }
+.container-about, .container-skills, .works {
+	margin-top: 6rem;
+	background: $background-color;
+	padding: 3em;
+	border-radius: 0 1rem 1rem 1rem;
+}
+
 .about {
 	.container-about {
 		display: flex;
 		justify-content: flex-start;
-		padding-left: 2em;
 		p {
 			flex: 2;
+			background: white;
+			border-radius: 0.5rem;
+			padding: 0.5rem;
 		}
 		.my-image {
 			width: 2em;
 			flex: 1;
             margin-left: 3em;
 			img {
+				border-radius: 0.5rem;
 				width: 100%;
 				height: auto;
 			}
@@ -100,20 +146,87 @@ main {
 
 .skills {
 	.container-skills {
+		background: $background-color;
 		display: flex;
 		flex-direction: column;
 		padding-left: 2em;
 		.programming, .web-workflow, .softwares {
+			background-color: white;
+			border-radius: 0.5rem;
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: center;
 			padding-top: 1.5em;
 			li {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: flex-end;
 				margin: 0 1.25em 1.5em 1.25em;
+				h4 {
+					order: 1;
+					font-weight: 500;
+				}
 				img {
+					order: 0;
 					width:4em;
 				}
+			}
+		}
+	}
+}
+
+.portfolio {
+	.works {
+		background: $background-color;
+		li {
+			padding: 2rem 0 4rem 0;
+			display: flex;
+			flex-direction: row;
+			border-bottom: 2px black solid;
+			flex-wrap: wrap;
+			.project-image {
+				flex: 1;
+				img {
+					width: 100%;
+				}
+			}
+			.project-info {
+				flex: 3;
+				.description {
+					margin-bottom: 3rem;
+				}
+				.tools {
+					font-style: italic;
+				}
+				.button {
+					background: $button-color;
+					padding: 0.75rem 1rem;
+					border-radius: 0.5rem;
+    				margin-right: 1rem;
+				}
+			}
+		}
+		li:first-child {
+			padding-top: 0;
+		}
+		li:nth-child(odd) {
+			.project-image {
+				order: 0;
+				margin-right: 3rem;
+			}
+			.project-info {
+				order: 1;
+			}
+		}
+		li:nth-child(even) {
+			.project-image {
+				order: 1;
+				margin-left: 3rem;
+			}
+			.project-info {
+				order: 0;
 			}
 		}
 	}
