@@ -39,9 +39,9 @@ h2 {
     height: 6rem;
     font-size: 3em;
     padding: 1rem 3rem;
--webkit-box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
--moz-box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
-box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
+	-webkit-box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
+	-moz-box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
+	box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
 }
 
 .info {
@@ -51,6 +51,8 @@ box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
         margin-left: 25%;
         text-align: center;
         font-size: 1.15em;
+        color: $headings-color;
+        font-weight: 500;
 	}
 }
 
@@ -73,7 +75,6 @@ canvas {
 }
 
 header {
-	height: 100vh;
     position: relative;
 	z-index: 10;
 	nav {
@@ -86,6 +87,10 @@ header {
 			flex-direction: row;
 			li {
 				padding: 0.5rem 1.5rem;
+				a {
+					font-weight: 700;
+					color: $dark-orange;
+				}
 			}
 			li:hover {
 				background: $background-color;
@@ -132,26 +137,45 @@ header {
 	}
 }
 
+header.primary {
+	height: 100vh;
+}
+
 main {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 }
 
-.about, .skills, .portfolio, .contact {
+				.button {
+					background: $button-color;
+					padding: 0.75rem 1rem;
+					border-radius: 0.5rem;
+    				margin-right: 1rem;
+    				font-size: 0.85em;
+    				color: $dark-orange;
+    				text-transform: uppercase;
+				}
+				.button:hover {
+					background: $background-color;
+					color: $orange;
+					font-weight: 700;
+				}
+
+.about, .skills, .portfolio, .contact, .project {
 	position: relative;
 	z-index: 10;
 	width: 80%;
 	margin: 0 10% 2em 10%;
 }
-.container-about, .container-skills, .works, .contact-container {
+.container-about, .container-skills, .works, .contact-container, .project-container {
 	margin-top: 6rem;
 	background: $background-color;
--webkit-box-shadow: 0px 0px 20px 2px rgba(47,69,41,0.53);
--webkit-box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
--moz-box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
-box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
-z-index: 20;
+	-webkit-box-shadow: 0px 0px 20px 2px rgba(47,69,41,0.53);
+	-webkit-box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
+	-moz-box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
+	box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
+	z-index: 20;
 	padding: 3em;
 	border-radius: 0 1rem 1rem 1rem;
 }
@@ -256,9 +280,6 @@ z-index: 20;
 				font-size: 1.25em;
 			}
 		}
-		// li.first {
-		// 	margin-top: 4rem;
-		// }
 		li {
 			display: flex;
 			flex-direction: row;
@@ -295,20 +316,6 @@ z-index: 20;
 				    padding: 0.25rem 0;
 				    font-size: 0.85em;
 				    color: $dark-orange;
-				}
-				.button {
-					background: $button-color;
-					padding: 0.75rem 1rem;
-					border-radius: 0.5rem;
-    				margin-right: 1rem;
-    				font-size: 0.85em;
-    				color: $dark-orange;
-    				text-transform: uppercase;
-				}
-				.button:hover {
-					background: $background-color;
-					color: $orange;
-					font-weight: 700;
 				}
 			}
 		}
@@ -384,6 +391,29 @@ z-index: 20;
 			background: white;
 			color: $orange;
 			font-weight: 700;
+		}
+	}
+}
+
+.project {
+	z-index: 50;
+	h2 {
+		position: relative;
+		margin-top: 6rem;
+		display: inline-block;
+	}
+	.project-container {
+		margin-top: 0;
+		background : $background-color;
+		.video {
+			text-align: center;
+		}
+		.video, .project-description {
+			background: white;
+			padding: 1.5rem;
+		}
+		.project-description {
+			padding: 1.5rem 10%;
 		}
 	}
 }

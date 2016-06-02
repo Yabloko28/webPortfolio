@@ -1,0 +1,57 @@
+[
+	{
+		"image": "images/maude.jpg",
+		"title": "WordPress Custom Theme for Artst's Web Portfolio",
+		"tools": "Wordpress, Underscores Theme",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"button1": "View Site",
+		"button1Href": "http://maudedeslauriers.com/",
+		"button1ID" : "viewSite",
+		"button2": "Github",
+		"button2Href": "https://github.com/Yabloko28/deslauriers"
+	},
+	{
+		"image": "images/first.jpg",
+		"title": "Single Page Art Website with AngularJS",
+		"tools": "AngularJS, Etsy API, p5JS",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"button1": "View Site",
+		"button1Href": "http://nadyascreatures.com/",
+		"button1ID" : "viewSite",
+		"button2": "Github",
+		"button2Href": "https://github.com/Yabloko28/nadyaEidelstein"
+	},
+	{
+		"image": "images/first.jpg",
+		"title": "Single Page Wordpress Website for Showcasing Design Projects",
+		"tools": "Wordpress, AngularJS, Wordpress API, Underscores Theme",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"button1": "View Site",
+		"button1Href": "http://calderonasensio.com",
+		"button1ID" : "viewSite",
+		"button2": "Github",
+		"button2Href": "https://github.com/Yabloko28/www.celiacalderonasensio.dev"
+	},
+	{
+		"image": "images/first.jpg",
+		"title": "Moodject - UX Design Project for Mobile App",
+		"tools": "UX design",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"button1": "Read More",
+		"button1Href": "templates/moodject.html",
+		"button1ID" : "readMore",
+		"button2": "Invision Prototype",
+		"button2Href": "https://invis.io/BE2VH09R2"
+	},
+	{
+		"image": "images/first.jpg",
+		"title": "Colourful Website for Artist's Projects",
+		"tools": "AngularJS",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"button1": "View Site",
+		"button1ID" : "viewSite",
+		"button1Href": "http://alisa-ruzavina.com",
+		"button2": "Github",
+		"button2Href": "https://github.com/Yabloko28/aliceRuzavina"
+	}
+]

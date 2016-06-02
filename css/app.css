@@ -445,6 +445,8 @@ h2 {
   margin-left: 25%;
   text-align: center;
   font-size: 1.15em;
+  color: #3d1b04;
+  font-weight: 500;
 }
 
 body {
@@ -466,7 +468,6 @@ canvas {
 }
 
 header {
-  height: 100vh;
   position: relative;
   z-index: 10;
 }
@@ -482,6 +483,10 @@ header nav .menu {
 }
 header nav .menu li {
   padding: 0.5rem 1.5rem;
+}
+header nav .menu li a {
+  font-weight: 700;
+  color: #8e4407;
 }
 header nav .menu li:hover {
   background: #f3f6f2;
@@ -525,20 +530,40 @@ header nav .social-media li.mail:hover {
   background-repeat: no-repeat;
 }
 
+header.primary {
+  height: 100vh;
+}
+
 main {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.about, .skills, .portfolio, .contact {
+.button {
+  background: #d7ee85;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  font-size: 0.85em;
+  color: #8e4407;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background: #f3f6f2;
+  color: #fcab62;
+  font-weight: 700;
+}
+
+.about, .skills, .portfolio, .contact, .project {
   position: relative;
   z-index: 10;
   width: 80%;
   margin: 0 10% 2em 10%;
 }
 
-.container-about, .container-skills, .works, .contact-container {
+.container-about, .container-skills, .works, .contact-container, .project-container {
   margin-top: 6rem;
   background: #f3f6f2;
   -webkit-box-shadow: 0px 0px 20px 2px rgba(47, 69, 41, 0.53);
@@ -680,20 +705,6 @@ main {
   font-size: 0.85em;
   color: #8e4407;
 }
-.portfolio .works li .project-info .button {
-  background: #d7ee85;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  margin-right: 1rem;
-  font-size: 0.85em;
-  color: #8e4407;
-  text-transform: uppercase;
-}
-.portfolio .works li .project-info .button:hover {
-  background: #f3f6f2;
-  color: #fcab62;
-  font-weight: 700;
-}
 .portfolio .works li:last-child {
   margin-bottom: 0;
 }
@@ -747,6 +758,29 @@ main {
   background: white;
   color: #fcab62;
   font-weight: 700;
+}
+
+.project {
+  z-index: 50;
+}
+.project h2 {
+  position: relative;
+  margin-top: 6rem;
+  display: inline-block;
+}
+.project .project-container {
+  margin-top: 0;
+  background: #f3f6f2;
+}
+.project .project-container .video {
+  text-align: center;
+}
+.project .project-container .video, .project .project-container .project-description {
+  background: white;
+  padding: 1.5rem;
+}
+.project .project-container .project-description {
+  padding: 1.5rem 10%;
 }
 
 footer {
