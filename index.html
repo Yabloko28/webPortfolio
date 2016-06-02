@@ -8,6 +8,7 @@
     
     <script language="javascript" type="text/javascript" src="scripts/_bower.js"></script>
     <script language="javascript" type="text/javascript" src="app.js"></script>
+    <script src="https://use.fontawesome.com/ce026f83b6.js"></script>
     
     <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,400italic,700' rel='stylesheet' type='text/css'>
@@ -25,9 +26,9 @@
 	    		<li><a href="#contact">Contact</a></li>
 	    	</ul>
 	    	<ul class="social-media">
-	    		<li><img src="http://nadyascreatures.com/images/mail.svg" alt="Mail icon"></li>
-	    		<li><img src="http://nadyascreatures.com/images/mail.svg" alt="Github icon"></li>
-	    		<li><img src="http://nadyascreatures.com/images/mail.svg" alt="LinkedIn icon"></li>
+	    		<li class="linkedin"></li>
+	    		<li class="github"></li>
+	    		<li class="mail"></li>
 	    	</ul>
 	    </nav>
 	    <div class="info">
@@ -143,22 +144,26 @@
 					<h4>Rhino 3D</h4>
 					<img src="images/rhino.png">
 				</li>
-				<li></li>
 			</ul>
 		</div>
 	</section>
 
 	<section class="portfolio" id="portfolio">
 		<h2>Portfolio</h2>
-
 		<ul class="works">
-			<li>
+<!-- 		<ul class="search">
+			<li><a>Sort projects by&nbsp;</a></li>
+			<li>WordPress</li>
+			<li>AngularJS</li>
+			<li>UX design</li>
+		</ul> -->
+			<li class="first">
 			    <div class="project-image"><img src="images/first.jpg"></div>
 			    <div class="project-info">
 				    <h3>First</h3>
 				    <p class="tools">Wordpress, AngularJS, Wordpress API</p>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<a class="button" href="">View Site</a>
+					<a class="button" href="http://maudedeslauriers.com/">View Site</a>
 					<a class="button" href="">Github</a>
 				</div>
 			</li>
@@ -197,9 +202,22 @@
 
 	<section class="contact" id="contact">
 	    <h2>Contact</h2>
-		<div class="social-media"></div>
+		<div class="contact-container">
+		    <h3>Get In Touch!</h3>
+			<p class="email">nadezhda.fed.28@gmail.com</p>
+			<p class="telephone">tel.:416-859-5097</p>
+			<form id="contact-form" action="/" method="post">
+				<input placeholder="Your Name" type="text" tabindex="1" required="required">
+				<input placeholder="E-mail Address" type="email" tabindex="2" ="required">
+				<input placeholder="Subject" type="text" tabindex="3">
+				<textarea rows="4" placeholder="Your Message" type="text" tabindex="4" required="required"></textarea>
+				<button name="submit" type="submit" id="contact-submit">Send Message</button>
+			</form>
+		</div>
 	</section>
 	</main>
+
+	<footer>Copyright &copy; 2016, Nadya Eidelstein</footer>
 </body>
 
 </html>
