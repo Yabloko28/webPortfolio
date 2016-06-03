@@ -58,6 +58,7 @@ h2 {
 
 body {
 	font-size: 18px;
+	background: $orange;
 }
 
 ul {
@@ -67,6 +68,10 @@ ul {
 canvas {
 	position: fixed;
 	top: 0;
+	display: block;
+	@include break(0, 60.625rem) {
+		display: none;
+	}
 }
 
 .button, .search, button {
@@ -165,8 +170,14 @@ main {
 .about, .skills, .portfolio, .contact, .project {
 	position: relative;
 	z-index: 10;
+	@include break(60.625rem) {
 	width: 80%;
 	margin: 0 10% 2em 10%;
+}
+	@include break(0rem, 60.625rem) {
+		width: 90%;
+		margin: 0 5% 2em 5%;
+	}
 }
 .container-about, .container-skills, .works, .contact-container, .project-container {
 	margin-top: 6rem;
@@ -184,11 +195,18 @@ main {
 	.container-about {
 		display: flex;
 		justify-content: flex-start;
-		p {
+		.about-me {
 			flex: 2;
 			background: white;
 			border-radius: 0.5rem;
 			padding: 1rem;
+			p:last-child {
+				margin-top: 1.5rem;
+				a {
+					font-weight: 700;
+					color: $dark-orange;
+				}
+			}
 		}
 		.my-image {
 			width: 2em;
@@ -198,9 +216,9 @@ main {
 				border-radius: 0.5rem;
 				width: 100%;
 				height: auto;
-				// outline: 0.1rem solid $button-color;
+				// outline: 0.25rem dotted $button-color;
     // 			outline-offset: -0.5rem;
-    			border: 0.5rem $button-color solid;
+    			// border: 0.5rem $orange solid;
 			}
 		}
 	}
@@ -405,15 +423,37 @@ main {
 	.project-container {
 		margin-top: 0;
 		background : $background-color;
-		.video {
-			text-align: center;
-		}
-		.video, .project-description {
-			background: white;
+		.project-info {
 			padding: 1.5rem;
-		}
-		.project-description {
-			padding: 1.5rem 10%;
+			background: white;
+			border-radius: 0.5rem;
+			.video {
+				padding-bottom: 1.5rem;
+				text-align: center;
+			}
+			.project-description {
+				width: 80%;
+				margin: 1.5rem 10%;
+			}
+			.but {
+				text-align: center;
+				margin: 3rem 0;
+			}
+			.wireframes {
+				width: 80%;
+				margin: 0 10%;
+				.first-row, .second-row {
+					display: flex;
+					flex-flow: row;
+					justify-content: flex-start;
+					align-items: flex-start;
+				}
+				img {
+					flex: 1;
+					@include icon-grid(2, 15%);
+					border-radius: 0.25rem;
+				}
+			}
 		}
 	}
 }

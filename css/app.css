@@ -451,6 +451,7 @@ h2 {
 
 body {
   font-size: 18px;
+  background: #fcab62;
 }
 
 ul {
@@ -460,6 +461,12 @@ ul {
 canvas {
   position: fixed;
   top: 0;
+  display: block;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625rem) {
+  canvas {
+    display: none;
+  }
 }
 
 .button, .search, button {
@@ -559,8 +566,18 @@ main {
 .about, .skills, .portfolio, .contact, .project {
   position: relative;
   z-index: 10;
-  width: 80%;
-  margin: 0 10% 2em 10%;
+}
+@media only screen and (min-width: 60.625rem) {
+  .about, .skills, .portfolio, .contact, .project {
+    width: 80%;
+    margin: 0 10% 2em 10%;
+  }
+}
+@media only screen and (min-width: 0rem) and (max-width: 60.625rem) {
+  .about, .skills, .portfolio, .contact, .project {
+    width: 90%;
+    margin: 0 5% 2em 5%;
+  }
 }
 
 .container-about, .container-skills, .works, .contact-container, .project-container {
@@ -579,11 +596,18 @@ main {
   display: flex;
   justify-content: flex-start;
 }
-.about .container-about p {
+.about .container-about .about-me {
   flex: 2;
   background: white;
   border-radius: 0.5rem;
   padding: 1rem;
+}
+.about .container-about .about-me p:last-child {
+  margin-top: 1.5rem;
+}
+.about .container-about .about-me p:last-child a {
+  font-weight: 700;
+  color: #8e4407;
 }
 .about .container-about .my-image {
   width: 2em;
@@ -594,7 +618,6 @@ main {
   border-radius: 0.5rem;
   width: 100%;
   height: auto;
-  border: 0.5rem #d7ee85 solid;
 }
 
 .skills .container-skills {
@@ -772,15 +795,44 @@ main {
   margin-top: 0;
   background: #f3f6f2;
 }
-.project .project-container .video {
+.project .project-container .project-info {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 0.5rem;
+}
+.project .project-container .project-info .video {
+  padding-bottom: 1.5rem;
   text-align: center;
 }
-.project .project-container .video, .project .project-container .project-description {
-  background: white;
-  padding: 1.5rem;
+.project .project-container .project-info .project-description {
+  width: 80%;
+  margin: 1.5rem 10%;
 }
-.project .project-container .project-description {
-  padding: 1.5rem 10%;
+.project .project-container .project-info .but {
+  text-align: center;
+  margin: 3rem 0;
+}
+.project .project-container .project-info .wireframes {
+  width: 80%;
+  margin: 0 10%;
+}
+.project .project-container .project-info .wireframes .first-row, .project .project-container .project-info .wireframes .second-row {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.project .project-container .project-info .wireframes img {
+  flex: 1;
+  width: 42.5%;
+  border-radius: 0.25rem;
+}
+.project .project-container .project-info .wireframes img:nth-child(n) {
+  margin-bottom: 15%;
+  margin-right: 15%;
+}
+.project .project-container .project-info .wireframes img:nth-child(2n) {
+  margin-right: 0;
 }
 
 footer {

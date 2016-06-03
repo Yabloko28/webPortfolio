@@ -3,7 +3,7 @@
 		"image": "images/maude.jpg",
 		"title": "WordPress Custom Theme for Artst's Web Portfolio",
 		"tools": "Wordpress, Underscores Theme",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"description": "The website showcases the works by a Montreal-based visual artist. For this I made a fully custom WordPress theme, based on Underscores Theme. The overal look and colour pallete, as well as hand-drawn graphics, were chosen to compliment the artist's works but not to interfere with them. The layout was made to be simple, so it is very easy to navigate the website and find the necessary information.",
 		"button1": "View Site",
 		"button1Href": "http://maudedeslauriers.com/",
 		"button1ID" : "viewSite",
@@ -14,7 +14,7 @@
 		"image": "images/first.jpg",
 		"title": "Single Page Art Website with AngularJS",
 		"tools": "AngularJS, Etsy API, p5JS",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"description": "This is a single-page website created to present my art and design projects online. It was made with Angular JS, so the website consists of only 3 templates, that are populated with the JSON data. To create an online shop Etsy, API was used there.",
 		"button1": "View Site",
 		"button1Href": "http://nadyascreatures.com/",
 		"button1ID" : "viewSite",
@@ -22,10 +22,10 @@
 		"button2Href": "https://github.com/Yabloko28/nadyaEidelstein"
 	},
 	{
-		"image": "images/first.jpg",
+		"image": "images/celia.jpg",
 		"title": "Single Page Wordpress Website for Showcasing Design Projects",
 		"tools": "Wordpress, AngularJS, Wordpress API, Underscores Theme",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"description": "This minimalistic website for a London,UK-based fashion designer is powered by Wordpress and was created from a fully customized Underscores theme. I used AngularJS and WordPress API to create a more light-weight website. The hand-written navigation and logo were added to add some spice to the clean and minimalistic look of this website.",
 		"button1": "View Site",
 		"button1Href": "http://calderonasensio.com",
 		"button1ID" : "viewSite",
@@ -33,10 +33,10 @@
 		"button2Href": "https://github.com/Yabloko28/www.celiacalderonasensio.dev"
 	},
 	{
-		"image": "images/first.jpg",
+		"image": "images/moodject.jpg",
 		"title": "Moodject - UX Design Project for Mobile App",
 		"tools": "UX design",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"description": "The design for the mobile application Moodject that is aiming to solve the problems people from creative industries encounter in the fast-paced 21st century.  ",
 		"button1": "Read More",
 		"button1Href": "templates/moodject.html",
 		"button1ID" : "readMore",
@@ -44,10 +44,10 @@
 		"button2Href": "https://invis.io/BE2VH09R2"
 	},
 	{
-		"image": "images/first.jpg",
+		"image": "images/alice.jpg",
 		"title": "Colourful Website for Artist's Projects",
 		"tools": "AngularJS",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"description": "Filled with colours and patterns, this website was designed and made for a London, UK-based artist and designer. To reveal the individuality of the artist and her artworks, all the navigation and decorative elements were hand-drawn and painted for the website to look like an interactive digital sketchbook. AngularJS framework was used to bring this dream to reality.",
 		"button1": "View Site",
 		"button1ID" : "viewSite",
 		"button1Href": "http://alisa-ruzavina.com",

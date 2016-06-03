@@ -1,0 +1,24 @@
+@mixin icon-grid ($qty, $margin) {
+	width: ((100% - (( $qty - 1) * $margin )) / $qty);
+    &:nth-child(n) {
+    	margin-bottom:  $margin;
+    	margin-right: $margin;
+    }
+    &:nth-child(#{$qty}n) {
+    	margin-right: 0;
+    }
+}
+
+@mixin break($args...) {
+	@if length($args) == 1 {
+	    @media only screen and (min-width: nth($args, 1)) {
+		    @content;
+	    }
+	}
+	@if length($args) == 2 {
+		@media only screen and (min-width: nth($args,1))
+		and (max-width: nth($args,2)) {
+			@content;
+		}
+	}
+}
