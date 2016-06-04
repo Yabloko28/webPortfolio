@@ -25,11 +25,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 5em;
+	font-size: 6em;
     text-align: center;
     width: 60%;
     margin: 6rem 20% 4rem 20%;
     color: $main-color;
+    @include break(0, 60.625em) {
+    	width: 100%;
+    	margin: 6rem 0 4rem 0;
+    }
+    @include break(0, 38em) {
+    	font-size: 3em;
+    }
+    @include break(38em, 60.625em) {
+    	font-size: 4em;
+    }
+    @include break(95em) {
+    	width: 60%;
+    	margin: 8rem 20% 6rem 20%;
+    	font-size: 7em;
+    }
 }
 
 h2 {
@@ -42,6 +57,14 @@ h2 {
 	-webkit-box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
 	-moz-box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
 	box-shadow: 6px -6px 20px -4px rgba(47,69,41,0.53);
+	@include break(0, 38em) {
+		font-size: 1.75em;
+		height: 4rem;
+	}
+	@include break(38em, 60.625em) {
+		font-size: 2em;
+		height: 5rem;
+	}
 }
 
 .info {
@@ -53,6 +76,16 @@ h2 {
         font-size: 1.15em;
         color: $headings-color;
         font-weight: 500;
+        @include break(0, 38em) {
+        	width: 90%;
+        	margin: 0 5% 9rem 5%;
+        	font-size: 1em;
+        }
+        @include break(38em, 60.625em) {
+        	width: 70%;
+        	margin: 0 15% 8rem 15%;
+        	font-size: 1em;
+        }
 	}
 }
 
@@ -69,9 +102,13 @@ canvas {
 	position: fixed;
 	top: 0;
 	display: block;
-	@include break(0, 60.625rem) {
+	@include break(0, 38em) {
 		display: none;
 	}
+}
+
+.visible {
+	display: block;
 }
 
 .button, .search, button {
@@ -82,16 +119,55 @@ canvas {
 header {
     position: relative;
 	z-index: 10;
+	width: 100%;
 	nav {
 		background: $background-color-alpha;
 		display: flex;
 		flex-direction: row;
 		padding: 0 2rem;
-		.menu {
+		@include break(0, 38em) {
+			padding: 0.25rem 0.75rem 0.25rem 1rem;
+		}
+		@include break(95em) {
+			padding: 0 25%;
+		}
+		.menu-icon {
+			@include break(0, 60.625em) {
+				display: block;
+				.fa {
+					font-size: 2rem;
+					color: $dark-orange;
+				}
+			}
+			@include break(60.625em) {
+				display: none;
+			}
+		}
+		.sliding-menu {
+			display: block;
+			@include break(0, 60.625em) {
+				display: none;
+				position: absolute;
+    			top: 2.3em;
+    			left: 0;
+    			width: 100%;
+    			padding: 0.25rem 1rem 0.25rem 1rem;
+    			background: $background-color;
+    			border-radius: 0 0 0.5rem 0.5rem
+			}
+		}
+		.menu, .menu-secondary {
 			display: flex;
 			flex-direction: row;
+			@include break(0, 60.625em) {
+	    		flex-direction: column;
+	    		display: none;
+	    	}
 			li {
 				padding: 0.5rem 1.5rem;
+				@include break(0, 60.625em) {
+					padding: 0.5em 0;
+				}
 				a {
 					font-weight: 700;
 					color: $dark-orange;
@@ -110,33 +186,33 @@ header {
 			display: flex;
 			flex-direction: row;
 			padding: 0.25rem 0rem 0.25rem 0rem;
-			li {
+			a {
 				margin: 0 1.5rem;
 				width: 2rem;
+				@include break(0, 38em) {
+	    		    margin: 0 0.5rem;
+	   		    }
+	   		    @include break(38em, 60.625em) {
+	   		    	margin: 0 1rem;
+	   		    }
 			}
-			li.linkedin {
-				background-image: url('../images/linkedin.svg');
-				background-repeat: no-repeat;
+			a.linkedin {
+				background: url('../images/linkedin.svg') no-repeat;
 			}
-			li.linkedin:hover {
-				background-image: url('../images/linkedin-active.svg');
-				background-repeat: no-repeat;
+			a.linkedin:hover {
+				background: url('../images/linkedin-active.svg') no-repeat;
 			}
-			li.github {
-				background-image: url('../images/github.svg');
-				background-repeat: no-repeat;
+			a.github {
+				background: url('../images/github.svg') no-repeat;
 			}
-			li.github:hover {
-				background-image: url('../images/github-active.svg');
-				background-repeat: no-repeat;
+			a.github:hover {
+				background: url('../images/github-active.svg') no-repeat;
 			}
-			li.mail {
-				background-image: url('../images/mail.svg');
-				background-repeat: no-repeat;
+			a.mail {
+				background: url('../images/mail.svg') no-repeat;
 			}
-			li.mail:hover {
-				background-image: url('../images/mail-active.svg');
-				background-repeat: no-repeat;
+			a.mail:hover {
+				background: url('../images/mail-active.svg') no-repeat;
 			}
 		}
 	}
@@ -144,7 +220,58 @@ header {
 
 header.primary {
 	height: 100vh;
+	@include break(0, 60.625em) {
+    	height: auto;
+    }
 }
+
+header.secondary {
+	nav {
+		padding: 0rem 1.75rem 0rem 2rem;;
+		@include break(38em, 60.625em) {
+			padding: 0.25rem 0.75rem 0.25rem 2rem;
+		}
+		@include break(0, 38em) {
+			padding: 0.25rem 0.75rem 0rem 1rem;
+		}
+		@include break(95em) {
+			padding: 0 25%;
+		}
+	}
+}
+
+
+.menu-secondary {
+	@include break(0, 60.625em) {
+		display: flex !important;
+	}
+	@include break(0, 38em) {
+		li {
+			padding: 0.25rem 0 0.5em 0 !important;
+			a {
+				font-size: 1.3rem;
+			}
+		}
+	}
+	@include break(38em, 60.625em) {
+		li {
+			padding: 0 !important;
+			a {
+				font-size: 1.5em;
+			}
+		} 
+	}
+	@include break(95em) {
+		li a {
+			font-size: 1.3rem;
+		}
+	}
+	.fa {
+		font-size: 1.15em;
+		color: $dark-orange;
+	}
+}
+
 
 main {
 	position: relative;
@@ -160,6 +287,19 @@ main {
     				font-size: 0.85em;
     				color: $dark-orange;
     				text-transform: uppercase;
+    				@include break(0, 38em) {
+    					display: block;
+   						text-align: center;
+   						margin-left: 1rem;
+   						margin-right: 1rem;
+   						margin-bottom: 1rem;
+    				}
+    				@include break(38em, 60.625em) {
+   						text-align: center;
+   						margin-left: 1rem;
+   						margin-right: 1rem;
+   						margin-bottom: 1rem;
+    				}
 				}
 				.button:hover {
 					background: $background-color;
@@ -170,11 +310,19 @@ main {
 .about, .skills, .portfolio, .contact, .project {
 	position: relative;
 	z-index: 10;
-	@include break(60.625rem) {
-	width: 80%;
-	margin: 0 10% 2em 10%;
-}
-	@include break(0rem, 60.625rem) {
+	@include break(95em) {
+		width: 50%;
+		margin: 0 25% 2em 25%;
+	}
+	@include break(60.625em, 95em) {
+		width: 80%;
+		margin: 0 10% 2em 10%;
+	}
+	@include break(0, 38em) {
+		width: 100%;
+		margin: 0 0 2em 0;
+	}
+	@include break(38em, 60.625em) {
 		width: 90%;
 		margin: 0 5% 2em 5%;
 	}
@@ -189,17 +337,31 @@ main {
 	z-index: 20;
 	padding: 3em;
 	border-radius: 0 1rem 1rem 1rem;
+	@include break(0, 38em) {
+		margin-top: 4rem;
+		padding: 1rem;
+	}
+	@include break(38em, 60.625em) {
+		margin-top: 5rem;
+		padding: 2rem;
+	}
 }
 
 .about {
 	.container-about {
 		display: flex;
 		justify-content: flex-start;
+		@include break(0, 60.625em) {
+			display: block;
+		}
 		.about-me {
-			flex: 2;
+			flex: 3;
 			background: white;
 			border-radius: 0.5rem;
 			padding: 1rem;
+			@include break(0, 60.625em) {
+				border-radius: 0.5rem 0.5rem 0 0;
+			}
 			p:last-child {
 				margin-top: 1.5rem;
 				a {
@@ -212,6 +374,18 @@ main {
 			width: 2em;
 			flex: 1;
             margin-left: 2em;
+            @include break(0, 60.625em) {
+            	width: 100%;
+			    background: white;
+			    border-radius: 0 0 0.5rem 0.5rem;
+			    margin-left: 0;
+            }
+            @include break(0, 38em) {
+            	padding: 0.5rem 15% 0.5rem 15%;
+            }
+            @include break(38em, 60.625em) {
+            	padding: 0.5rem 30% 0.5rem 30%;
+            }
 			img {
 				border-radius: 0.5rem;
 				width: 100%;
@@ -234,6 +408,15 @@ main {
 		    font-size: 1em;
 		    font-weight: 500;
 		    color: $dark-orange;
+		    margin-top: 0;
+		    @include break(0, 60.626em) {
+				font-size: 0.9em;
+		    }
+		}
+		@include break(0, 38em) {
+			h3:first-child {
+				margin-top: 1.5rem;
+			}
 		}
 		.programming, .web-workflow, .softwares {
 			background-color: white;
@@ -262,13 +445,17 @@ main {
 				}
 			}
 		}
+		@include break(0, 60.625em) {
+			.softwares {
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 
 .portfolio {
 	.works {
 		background: $background-color;
-		// padding-top: 1.5rem;
 		.search {
 			margin-bottom: 1rem;
 		    padding: 0.5rem 2rem;
@@ -303,14 +490,43 @@ main {
 			flex-direction: row;
 			flex-wrap: wrap;
 			margin-bottom: 3rem;
+			@include break(0, 60.625em) {
+				display: block;
+			}
 			.project-image {
+				.mobile {
+					display: none;
+					@include break (0, 60.625em) {
+						display: block;
+						border-radius: 0.5rem 0.5rem 0 0;
+						-webkit-box-shadow: 0px 10px 14px -9px rgba(173,173,173,0.5);
+						-moz-box-shadow: 0px 10px 14px -9px rgba(173,173,173,0.5);
+						box-shadow: 0px 10px 14px -9px rgba(173,173,173,0.5);
+					}
+				}
+				.desktop {
+					display: block;
+					@include break(0, 60.625em) {
+						display: none;
+					}
+				}
 				background: white;
 				flex: 1;
 				padding-right: 3rem;
 				border-radius: 0.5rem 0 0 0.5rem;
+				@include break(0, 60.625em) {
+					border-radius: 0.5rem 0.5rem 0 0;
+					padding-right: 0;
+				}
+				@include break(95em) {
+					flex:1.5;
+				}
 				img {
 					border-radius: 0.5rem 0 0 0.5rem;
 					width: 100%;
+					@include break(0, 60.625em) {
+						border-radius: 0;
+					}
 				}
 			}
 			.project-info {
@@ -318,13 +534,27 @@ main {
 				background: white;
 				border-radius: 0 0.5rem 0.5rem 0;
 				flex: 3;
+				@include break(0, 60.625em) {
+					padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+					border-radius: 0 0rem 0.5rem 0.5rem;
+				}
+				@include break(38em, 60.625em) {
+					padding: 1rem 1rem 2.5rem 1rem;
+				}
 				h3 {
 					margin-bottom: 1rem;
+					margin-top: 0;
 					font-size: 1.25em;
+					@include break(0, 60.625em) {
+						margin-top: 1.5rem;
+					}
 				}
 				.description {
 					margin-bottom: 3rem;
 					margin-top: 1rem;
+					@include break(0, 60.625em) {
+						margin-bottom: 2rem;
+					}
 				}
 				.tools {
 					font-style: italic;
@@ -365,6 +595,13 @@ main {
 		display: flex;
 		flex-direction: column;
 		text-align: center;
+		@include break(0, 38em) {
+			padding-bottom: 2rem;
+		}
+		.form-messages {
+			padding-top: 2rem;
+			color: $dark-orange;
+		}
 		h3 {
 			font-size: 1.75em;
 			margin-bottom: 1.5rem;
@@ -374,7 +611,7 @@ main {
 		}
 		.email, .telephone {
 			margin-bottom: 0.75rem;
-			font-weight: 700;
+			font-weight: 500;
 			color: $dark-orange;
 		}
 		.telephone {
@@ -392,9 +629,23 @@ main {
 		    border: none;
 		    border-bottom: 0.15rem solid $button-color;
 		    border-left: 0.15rem solid $button-color;
+		    @include break(0, 38em) {
+		    	width: 100%;
+		    	margin-left: 0;
+		    	margin-right: 0;
+		    }
+		    @include break(38em, 60.625em) {
+		    	width: 95%;
+			    display: block;
+			    margin-left: 2.5%;
+			    margin-right: 2.5%;
+		    }
 		}
 		textarea {
 			margin-bottom: 3rem;
+			@include break(0, 60.625em) {
+				margin-bottom: 2rem;
+			}
 		}
 		button {
 			background: $button-color;
@@ -427,31 +678,84 @@ main {
 			padding: 1.5rem;
 			background: white;
 			border-radius: 0.5rem;
+			@include break(38em, 60.625em) {
+				padding: 1.5rem 1.5rem 0 1.5rem;
+			}
+			@include break(0, 38em) {
+				padding: 1rem 1rem 0 1rem;
+			}
 			.video {
 				padding-bottom: 1.5rem;
 				text-align: center;
+				iframe {
+					height: 19.688em;
+					width: 35em;
+					@include break(45.938em, 60.625em) {
+						width: 30em;
+						height: 16.875em;
+					}
+					@include break(38em, 45.938em) {
+						width: 23em;
+						height: 12.9em;
+					}
+					@include break(0, 38em) {
+						width: 100%;
+					}
+				}
+				@include break(38em, 60.625em) {
+					padding-bottom: 1rem;
+				}
 			}
 			.project-description {
 				width: 80%;
 				margin: 1.5rem 10%;
+				@include break(38em, 60.625em) {
+					width: 95%;
+					margin: 1rem 2.5%;
+				}
+				@include break(0, 38em) {
+					width: 100%;
+					margin: 1rem 0;
+				}
 			}
 			.but {
 				text-align: center;
 				margin: 3rem 0;
+				@include break(38em, 60.625em) {
+					margin: 3rem 0 4rem 0;
+				}
 			}
 			.wireframes {
 				width: 80%;
 				margin: 0 10%;
+				@include break(38em, 60.625em) {
+					width: 95%;
+					margin: 0 2.5%;
+				}
+				@include break(0, 38em) {
+					width: 100%;
+					margin: 0;
+				}
 				.first-row, .second-row {
 					display: flex;
 					flex-flow: row;
 					justify-content: flex-start;
 					align-items: flex-start;
+					@include break(0, 38em) {
+						display: block;
+					}
 				}
 				img {
 					flex: 1;
 					@include icon-grid(2, 15%);
 					border-radius: 0.25rem;
+					@include break(38em, 60.625em) {
+						@include icon-grid(2, 10%);
+					}
+					@include break(0, 38em) {
+						width: 100%;
+						margin: 0 0 2rem 0;
+					}
 				}
 			}
 		}

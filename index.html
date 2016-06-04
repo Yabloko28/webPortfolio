@@ -4,6 +4,7 @@
 <head>
 
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>Nadya Eidelstein, front end developer</title>
     
     <script language="javascript" type="text/javascript" src="scripts/_bower.js"></script>
@@ -19,17 +20,18 @@
 <body>
 	<header class="primary">
 	    <nav>
-	    	<ul class="menu">
+	        <div class="menu-icon" id="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+	    	<ul class="menu sliding-menu" id="sliding-menu">
 	    		<li><a href="#about">About</a></li>
 	    		<li><a href="#skills">Skills</a></li>
 	    		<li><a href="#portfolio">Portfolio</a></li>
 	    		<li><a href="#contact">Contact</a></li>
 	    	</ul>
-	    	<ul class="social-media">
-	    		<li class="linkedin"></li>
-	    		<li class="github"></li>
-	    		<li class="mail"></li>
-	    	</ul>
+	    	<div class="social-media">
+	    		<a class="linkedin" href="https://www.linkedin.com/in/nadya-fedotova-2480b2ab?trk=hp-identity-photo" target="_blank"></a>
+	    		<a class="github" target="_blank" href="https://github.com/Yabloko28"></a>
+	    		<a class="mail" target="_blank" href="nadezhda.fed.28@gmail.com"></a>
+	    	</div>
 	    </nav>
 	    <div class="info">
 	    	<h1>NADYA EIDELSTEIN</h1>
@@ -44,7 +46,7 @@
 			<p>My passion for design, interactivity and programming has resulted in me working in the field of web-development. Designing the satisfying user experience and layout and then bringing it to reality with clean and efficient code is something that thrills me. Finding the perfect solution for each client and being up to date with innovations in web development are my guidelines that keep me growing and working.</p>
 			<p>I am also a multidisciplinary artist, working with digital technologoies and code, combining them with hand media to create hybrids that reflect my understanding of current digital age. If you are curious to see my art projects, you can visit the website <a href="http://nadyascreatures.com/#/home">nadyascreatures.com</a>.</p>
 			</div>
-			<div class="my-image"><img src="images/nada.jpg"></div>
+			<div class="my-image"><img src="images/nadya.jpg"></div>
 		</div>
 	</section>
 
@@ -166,13 +168,13 @@
 		    <h3>Get In Touch!</h3>
 			<p class="email">nadezhda.fed.28@gmail.com</p>
 			<p class="telephone">tel.:416-859-5097</p>
-			<form id="contact-form" action="/" method="post">
-				<input placeholder="Your Name" type="text" tabindex="1" required="required">
-				<input placeholder="E-mail Address" type="email" tabindex="2" ="required">
-				<input placeholder="Subject" type="text" tabindex="3">
-				<textarea rows="4" placeholder="Your Message" type="text" tabindex="4" required="required"></textarea>
+			<form id="ajax-contact" method="post" action="mailer.php">
+				<input name="name" id="name" placeholder="Your Name" type="text" tabindex="1" required>
+				<input id="email" name="email" placeholder="E-mail Address" type="email" tabindex="2" ="required">
+				<textarea id="message" name="message" rows="8" placeholder="Your Message" type="text" tabindex="4" required="required"></textarea>
 				<button name="submit" type="submit" id="contact-submit">Send Message</button>
 			</form>
+			<div id="form-messages" class="form-messages"></div>
 		</div>
 	</section>
 	</main>

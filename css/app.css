@@ -420,11 +420,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 6em;
   text-align: center;
   width: 60%;
   margin: 6rem 20% 4rem 20%;
   color: #d7ee85;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  h1 {
+    width: 100%;
+    margin: 6rem 0 4rem 0;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  h1 {
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  h1 {
+    font-size: 4em;
+  }
+}
+@media only screen and (min-width: 95em) {
+  h1 {
+    width: 60%;
+    margin: 8rem 20% 6rem 20%;
+    font-size: 7em;
+  }
 }
 
 h2 {
@@ -438,6 +461,18 @@ h2 {
   -moz-box-shadow: 6px -6px 20px -4px rgba(47, 69, 41, 0.53);
   box-shadow: 6px -6px 20px -4px rgba(47, 69, 41, 0.53);
 }
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  h2 {
+    font-size: 1.75em;
+    height: 4rem;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  h2 {
+    font-size: 2em;
+    height: 5rem;
+  }
+}
 
 .info p {
   width: 50%;
@@ -447,6 +482,20 @@ h2 {
   font-size: 1.15em;
   color: #3d1b04;
   font-weight: 500;
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .info p {
+    width: 90%;
+    margin: 0 5% 9rem 5%;
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .info p {
+    width: 70%;
+    margin: 0 15% 8rem 15%;
+    font-size: 1em;
+  }
 }
 
 body {
@@ -463,10 +512,14 @@ canvas {
   top: 0;
   display: block;
 }
-@media only screen and (min-width: 0) and (max-width: 60.625rem) {
+@media only screen and (min-width: 0) and (max-width: 38em) {
   canvas {
     display: none;
   }
+}
+
+.visible {
+  display: block;
 }
 
 .button, .search, button {
@@ -477,6 +530,7 @@ canvas {
 header {
   position: relative;
   z-index: 10;
+  width: 100%;
 }
 header nav {
   background: rgba(243, 246, 242, 0.75);
@@ -484,22 +538,72 @@ header nav {
   flex-direction: row;
   padding: 0 2rem;
 }
-header nav .menu {
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  header nav {
+    padding: 0.25rem 0.75rem 0.25rem 1rem;
+  }
+}
+@media only screen and (min-width: 95em) {
+  header nav {
+    padding: 0 25%;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  header nav .menu-icon {
+    display: block;
+  }
+  header nav .menu-icon .fa {
+    font-size: 2rem;
+    color: #8e4407;
+  }
+}
+@media only screen and (min-width: 60.625em) {
+  header nav .menu-icon {
+    display: none;
+  }
+}
+header nav .sliding-menu {
+  display: block;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  header nav .sliding-menu {
+    display: none;
+    position: absolute;
+    top: 2.3em;
+    left: 0;
+    width: 100%;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    background: #f3f6f2;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+header nav .menu, header nav .menu-secondary {
   display: flex;
   flex-direction: row;
 }
-header nav .menu li {
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  header nav .menu, header nav .menu-secondary {
+    flex-direction: column;
+    display: none;
+  }
+}
+header nav .menu li, header nav .menu-secondary li {
   padding: 0.5rem 1.5rem;
 }
-header nav .menu li a {
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  header nav .menu li, header nav .menu-secondary li {
+    padding: 0.5em 0;
+  }
+}
+header nav .menu li a, header nav .menu-secondary li a {
   font-weight: 700;
   color: #8e4407;
 }
-header nav .menu li:hover {
+header nav .menu li:hover, header nav .menu-secondary li:hover {
   background: #f3f6f2;
   font-weight: 700;
 }
-header nav .menu li:hover a {
+header nav .menu li:hover a, header nav .menu-secondary li:hover a {
   color: #fcab62;
 }
 header nav .social-media {
@@ -508,37 +612,96 @@ header nav .social-media {
   flex-direction: row;
   padding: 0.25rem 0rem 0.25rem 0rem;
 }
-header nav .social-media li {
+header nav .social-media a {
   margin: 0 1.5rem;
   width: 2rem;
 }
-header nav .social-media li.linkedin {
-  background-image: url("../images/linkedin.svg");
-  background-repeat: no-repeat;
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  header nav .social-media a {
+    margin: 0 0.5rem;
+  }
 }
-header nav .social-media li.linkedin:hover {
-  background-image: url("../images/linkedin-active.svg");
-  background-repeat: no-repeat;
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  header nav .social-media a {
+    margin: 0 1rem;
+  }
 }
-header nav .social-media li.github {
-  background-image: url("../images/github.svg");
-  background-repeat: no-repeat;
+header nav .social-media a.linkedin {
+  background: url("../images/linkedin.svg") no-repeat;
 }
-header nav .social-media li.github:hover {
-  background-image: url("../images/github-active.svg");
-  background-repeat: no-repeat;
+header nav .social-media a.linkedin:hover {
+  background: url("../images/linkedin-active.svg") no-repeat;
 }
-header nav .social-media li.mail {
-  background-image: url("../images/mail.svg");
-  background-repeat: no-repeat;
+header nav .social-media a.github {
+  background: url("../images/github.svg") no-repeat;
 }
-header nav .social-media li.mail:hover {
-  background-image: url("../images/mail-active.svg");
-  background-repeat: no-repeat;
+header nav .social-media a.github:hover {
+  background: url("../images/github-active.svg") no-repeat;
+}
+header nav .social-media a.mail {
+  background: url("../images/mail.svg") no-repeat;
+}
+header nav .social-media a.mail:hover {
+  background: url("../images/mail-active.svg") no-repeat;
 }
 
 header.primary {
   height: 100vh;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  header.primary {
+    height: auto;
+  }
+}
+
+header.secondary nav {
+  padding: 0rem 1.75rem 0rem 2rem;
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  header.secondary nav {
+    padding: 0.25rem 0.75rem 0.25rem 2rem;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  header.secondary nav {
+    padding: 0.25rem 0.75rem 0rem 1rem;
+  }
+}
+@media only screen and (min-width: 95em) {
+  header.secondary nav {
+    padding: 0 25%;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .menu-secondary {
+    display: flex !important;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .menu-secondary li {
+    padding: 0.25rem 0 0.5em 0 !important;
+  }
+  .menu-secondary li a {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .menu-secondary li {
+    padding: 0 !important;
+  }
+  .menu-secondary li a {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 95em) {
+  .menu-secondary li a {
+    font-size: 1.3rem;
+  }
+}
+.menu-secondary .fa {
+  font-size: 1.15em;
+  color: #8e4407;
 }
 
 main {
@@ -556,6 +719,23 @@ main {
   color: #8e4407;
   text-transform: uppercase;
 }
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .button {
+    display: block;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .button {
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+}
 
 .button:hover {
   background: #f3f6f2;
@@ -567,13 +747,25 @@ main {
   position: relative;
   z-index: 10;
 }
-@media only screen and (min-width: 60.625rem) {
+@media only screen and (min-width: 95em) {
+  .about, .skills, .portfolio, .contact, .project {
+    width: 50%;
+    margin: 0 25% 2em 25%;
+  }
+}
+@media only screen and (min-width: 60.625em) and (max-width: 95em) {
   .about, .skills, .portfolio, .contact, .project {
     width: 80%;
     margin: 0 10% 2em 10%;
   }
 }
-@media only screen and (min-width: 0rem) and (max-width: 60.625rem) {
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .about, .skills, .portfolio, .contact, .project {
+    width: 100%;
+    margin: 0 0 2em 0;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
   .about, .skills, .portfolio, .contact, .project {
     width: 90%;
     margin: 0 5% 2em 5%;
@@ -591,16 +783,38 @@ main {
   padding: 3em;
   border-radius: 0 1rem 1rem 1rem;
 }
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .container-about, .container-skills, .works, .contact-container, .project-container {
+    margin-top: 4rem;
+    padding: 1rem;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .container-about, .container-skills, .works, .contact-container, .project-container {
+    margin-top: 5rem;
+    padding: 2rem;
+  }
+}
 
 .about .container-about {
   display: flex;
   justify-content: flex-start;
 }
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .about .container-about {
+    display: block;
+  }
+}
 .about .container-about .about-me {
-  flex: 2;
+  flex: 3;
   background: white;
   border-radius: 0.5rem;
   padding: 1rem;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .about .container-about .about-me {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
 }
 .about .container-about .about-me p:last-child {
   margin-top: 1.5rem;
@@ -613,6 +827,24 @@ main {
   width: 2em;
   flex: 1;
   margin-left: 2em;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .about .container-about .my-image {
+    width: 100%;
+    background: white;
+    border-radius: 0 0 0.5rem 0.5rem;
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .about .container-about .my-image {
+    padding: 0.5rem 15% 0.5rem 15%;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .about .container-about .my-image {
+    padding: 0.5rem 30% 0.5rem 30%;
+  }
 }
 .about .container-about .my-image img {
   border-radius: 0.5rem;
@@ -630,6 +862,17 @@ main {
   font-size: 1em;
   font-weight: 500;
   color: #8e4407;
+  margin-top: 0;
+}
+@media only screen and (min-width: 0) and (max-width: 60.626em) {
+  .skills .container-skills h3 {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .skills .container-skills h3:first-child {
+    margin-top: 1.5rem;
+  }
 }
 .skills .container-skills .programming, .skills .container-skills .web-workflow, .skills .container-skills .softwares {
   background-color: white;
@@ -657,6 +900,11 @@ main {
 .skills .container-skills .programming li img, .skills .container-skills .web-workflow li img, .skills .container-skills .softwares li img {
   order: 0;
   width: 4em;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .skills .container-skills .softwares {
+    margin-bottom: 0;
+  }
 }
 
 .portfolio .works {
@@ -695,15 +943,56 @@ main {
   flex-wrap: wrap;
   margin-bottom: 3rem;
 }
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .portfolio .works li {
+    display: block;
+  }
+}
 .portfolio .works li .project-image {
   background: white;
   flex: 1;
   padding-right: 3rem;
   border-radius: 0.5rem 0 0 0.5rem;
 }
+.portfolio .works li .project-image .mobile {
+  display: none;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .portfolio .works li .project-image .mobile {
+    display: block;
+    border-radius: 0.5rem 0.5rem 0 0;
+    -webkit-box-shadow: 0px 10px 14px -9px rgba(173, 173, 173, 0.5);
+    -moz-box-shadow: 0px 10px 14px -9px rgba(173, 173, 173, 0.5);
+    box-shadow: 0px 10px 14px -9px rgba(173, 173, 173, 0.5);
+  }
+}
+.portfolio .works li .project-image .desktop {
+  display: block;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .portfolio .works li .project-image .desktop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .portfolio .works li .project-image {
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width: 95em) {
+  .portfolio .works li .project-image {
+    flex: 1.5;
+  }
+}
 .portfolio .works li .project-image img {
   border-radius: 0.5rem 0 0 0.5rem;
   width: 100%;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .portfolio .works li .project-image img {
+    border-radius: 0;
+  }
 }
 .portfolio .works li .project-info {
   padding: 1.5rem 2rem 2.5rem 0;
@@ -711,13 +1000,35 @@ main {
   border-radius: 0 0.5rem 0.5rem 0;
   flex: 3;
 }
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .portfolio .works li .project-info {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius: 0 0rem 0.5rem 0.5rem;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .portfolio .works li .project-info {
+    padding: 1rem 1rem 2.5rem 1rem;
+  }
+}
 .portfolio .works li .project-info h3 {
   margin-bottom: 1rem;
+  margin-top: 0;
   font-size: 1.25em;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .portfolio .works li .project-info h3 {
+    margin-top: 1.5rem;
+  }
 }
 .portfolio .works li .project-info .description {
   margin-bottom: 3rem;
   margin-top: 1rem;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .portfolio .works li .project-info .description {
+    margin-bottom: 2rem;
+  }
 }
 .portfolio .works li .project-info .tools {
   font-style: italic;
@@ -737,6 +1048,15 @@ main {
   flex-direction: column;
   text-align: center;
 }
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .contact .contact-container {
+    padding-bottom: 2rem;
+  }
+}
+.contact .contact-container .form-messages {
+  padding-top: 2rem;
+  color: #8e4407;
+}
 .contact .contact-container h3 {
   font-size: 1.75em;
   margin-bottom: 1.5rem;
@@ -746,7 +1066,7 @@ main {
 }
 .contact .contact-container .email, .contact .contact-container .telephone {
   margin-bottom: 0.75rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #8e4407;
 }
 .contact .contact-container .telephone {
@@ -765,8 +1085,28 @@ main {
   border-bottom: 0.15rem solid #d7ee85;
   border-left: 0.15rem solid #d7ee85;
 }
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .contact .contact-container input, .contact .contact-container textarea {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .contact .contact-container input, .contact .contact-container textarea {
+    width: 95%;
+    display: block;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
 .contact .contact-container textarea {
   margin-bottom: 3rem;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  .contact .contact-container textarea {
+    margin-bottom: 2rem;
+  }
 }
 .contact .contact-container button {
   background: #d7ee85;
@@ -800,27 +1140,97 @@ main {
   background: white;
   border-radius: 0.5rem;
 }
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .project .project-container .project-info {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .project .project-container .project-info {
+    padding: 1rem 1rem 0 1rem;
+  }
+}
 .project .project-container .project-info .video {
   padding-bottom: 1.5rem;
   text-align: center;
+}
+.project .project-container .project-info .video iframe {
+  height: 19.688em;
+  width: 35em;
+}
+@media only screen and (min-width: 45.938em) and (max-width: 60.625em) {
+  .project .project-container .project-info .video iframe {
+    width: 30em;
+    height: 16.875em;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 45.938em) {
+  .project .project-container .project-info .video iframe {
+    width: 23em;
+    height: 12.9em;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .project .project-container .project-info .video iframe {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .project .project-container .project-info .video {
+    padding-bottom: 1rem;
+  }
 }
 .project .project-container .project-info .project-description {
   width: 80%;
   margin: 1.5rem 10%;
 }
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .project .project-container .project-info .project-description {
+    width: 95%;
+    margin: 1rem 2.5%;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .project .project-container .project-info .project-description {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
 .project .project-container .project-info .but {
   text-align: center;
   margin: 3rem 0;
 }
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .project .project-container .project-info .but {
+    margin: 3rem 0 4rem 0;
+  }
+}
 .project .project-container .project-info .wireframes {
   width: 80%;
   margin: 0 10%;
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .project .project-container .project-info .wireframes {
+    width: 95%;
+    margin: 0 2.5%;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .project .project-container .project-info .wireframes {
+    width: 100%;
+    margin: 0;
+  }
 }
 .project .project-container .project-info .wireframes .first-row, .project .project-container .project-info .wireframes .second-row {
   display: flex;
   flex-flow: row;
   justify-content: flex-start;
   align-items: flex-start;
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .project .project-container .project-info .wireframes .first-row, .project .project-container .project-info .wireframes .second-row {
+    display: block;
+  }
 }
 .project .project-container .project-info .wireframes img {
   flex: 1;
@@ -833,6 +1243,24 @@ main {
 }
 .project .project-container .project-info .wireframes img:nth-child(2n) {
   margin-right: 0;
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  .project .project-container .project-info .wireframes img {
+    width: 45%;
+  }
+  .project .project-container .project-info .wireframes img:nth-child(n) {
+    margin-bottom: 10%;
+    margin-right: 10%;
+  }
+  .project .project-container .project-info .wireframes img:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  .project .project-container .project-info .wireframes img {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
 }
 
 footer {
