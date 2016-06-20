@@ -532,118 +532,6 @@ header {
   z-index: 10;
   width: 100%;
 }
-header nav {
-  background: rgba(243, 246, 242, 0.75);
-  display: flex;
-  flex-direction: row;
-  padding: 0 2rem;
-}
-@media only screen and (min-width: 0) and (max-width: 38em) {
-  header nav {
-    padding: 0.25rem 0.75rem 0.25rem 1rem;
-  }
-}
-@media only screen and (min-width: 95em) {
-  header nav {
-    padding: 0 25%;
-  }
-}
-@media only screen and (min-width: 0) and (max-width: 60.625em) {
-  header nav .menu-icon {
-    display: block;
-  }
-  header nav .menu-icon .fa {
-    font-size: 2rem;
-    color: #8e4407;
-  }
-}
-@media only screen and (min-width: 60.625em) {
-  header nav .menu-icon {
-    display: none;
-  }
-}
-header nav .sliding-menu {
-  display: block;
-}
-@media only screen and (min-width: 0) and (max-width: 60.625em) {
-  header nav .sliding-menu {
-    display: none;
-    position: absolute;
-    top: 2.3em;
-    left: 0;
-    width: 100%;
-    padding: 0.25rem 1rem 0.25rem 1rem;
-    background: #f3f6f2;
-    border-radius: 0 0 0.5rem 0.5rem;
-  }
-}
-header nav .menu, header nav .menu-secondary {
-  display: flex;
-  flex-direction: row;
-}
-@media only screen and (min-width: 0) and (max-width: 60.625em) {
-  header nav .menu, header nav .menu-secondary {
-    flex-direction: column;
-    display: none;
-  }
-}
-header nav .menu li, header nav .menu-secondary li {
-  padding: 0.5rem 1.5rem;
-}
-@media only screen and (min-width: 0) and (max-width: 60.625em) {
-  header nav .menu li, header nav .menu-secondary li {
-    padding: 0.5em 0;
-  }
-}
-header nav .menu li a, header nav .menu-secondary li a {
-  font-weight: 700;
-  color: #8e4407;
-}
-header nav .menu li:hover, header nav .menu-secondary li:hover {
-  background: #f3f6f2;
-  font-weight: 700;
-}
-header nav .menu li:hover a, header nav .menu-secondary li:hover a {
-  color: #fcab62;
-}
-header nav .social-media {
-  margin-left: auto;
-  display: flex;
-  flex-direction: row;
-  padding: 0.25rem 0rem 0.25rem 0rem;
-}
-header nav .social-media a {
-  margin: 0 1.5rem;
-  width: 2rem;
-}
-@media only screen and (min-width: 0) and (max-width: 38em) {
-  header nav .social-media a {
-    margin: 0 0.5rem;
-  }
-}
-@media only screen and (min-width: 38em) and (max-width: 60.625em) {
-  header nav .social-media a {
-    margin: 0 1rem;
-  }
-}
-header nav .social-media a.linkedin {
-  background: url("../images/linkedin.svg") no-repeat;
-}
-header nav .social-media a.linkedin:hover {
-  background: url("../images/linkedin-active.svg") no-repeat;
-}
-header nav .social-media a.github {
-  background: url("../images/github.svg") no-repeat;
-}
-header nav .social-media a.github:hover {
-  background: url("../images/github-active.svg") no-repeat;
-}
-header nav .social-media a.mail {
-  background: url("../images/mail.svg") no-repeat;
-}
-header nav .social-media a.mail:hover {
-  background: url("../images/mail-active.svg") no-repeat;
-}
 
 header.primary {
   height: 100vh;
@@ -654,21 +542,153 @@ header.primary {
   }
 }
 
-header.secondary nav {
+nav.primary {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  top: 0;
+  background: rgba(243, 246, 242, 0.75);
+  display: flex;
+  flex-direction: row;
+  padding: 0 2rem;
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  nav.primary {
+    padding: 0.25rem 0.75rem 0.25rem 1rem;
+    height: 2.5rem;
+  }
+}
+@media only screen and (min-width: 38em) {
+  nav.primary {
+    height: 2.5rem;
+  }
+}
+@media only screen and (min-width: 95em) {
+  nav.primary {
+    padding: 0 25%;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  nav.primary .menu-icon {
+    display: block;
+  }
+  nav.primary .menu-icon .fa {
+    font-size: 2rem;
+    color: #8e4407;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  nav.primary .menu-icon {
+    display: block;
+  }
+  nav.primary .menu-icon .fa {
+    font-size: 2.5rem;
+    color: #8e4407;
+  }
+}
+@media only screen and (min-width: 60.625em) {
+  nav.primary .menu-icon {
+    display: none;
+  }
+}
+nav.primary .sliding-menu {
+  display: block;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  nav.primary .sliding-menu {
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    width: 100%;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    background: #f3f6f2;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+nav.primary .menu, nav.primary .menu-secondary {
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  nav.primary .menu, nav.primary .menu-secondary {
+    flex-direction: column;
+    display: none;
+  }
+}
+nav.primary .menu li, nav.primary .menu-secondary li {
+  padding: 0.5rem 1.5rem;
+}
+@media only screen and (min-width: 0) and (max-width: 60.625em) {
+  nav.primary .menu li, nav.primary .menu-secondary li {
+    padding: 0.5em 0;
+  }
+}
+nav.primary .menu li a, nav.primary .menu-secondary li a {
+  font-weight: 700;
+  color: #8e4407;
+}
+nav.primary .menu li:hover, nav.primary .menu-secondary li:hover {
+  background: #f3f6f2;
+  font-weight: 700;
+}
+nav.primary .menu li:hover a, nav.primary .menu-secondary li:hover a {
+  color: #fcab62;
+}
+nav.primary .social-media {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 0.25rem 0rem 0.25rem 0rem;
+}
+nav.primary .social-media a {
+  margin: 0 1.5rem;
+  width: 2rem;
+}
+@media only screen and (min-width: 0) and (max-width: 38em) {
+  nav.primary .social-media a {
+    margin: 0 0.5rem;
+  }
+}
+@media only screen and (min-width: 38em) and (max-width: 60.625em) {
+  nav.primary .social-media a {
+    margin: 0 1rem;
+  }
+}
+nav.primary .social-media a.linkedin {
+  background: url("../images/linkedin.svg") no-repeat;
+}
+nav.primary .social-media a.linkedin:hover {
+  background: url("../images/linkedin-active.svg") no-repeat;
+}
+nav.primary .social-media a.github {
+  background: url("../images/github.svg") no-repeat;
+}
+nav.primary .social-media a.github:hover {
+  background: url("../images/github-active.svg") no-repeat;
+}
+nav.primary .social-media a.mail {
+  background: url("../images/mail.svg") no-repeat;
+}
+nav.primary .social-media a.mail:hover {
+  background: url("../images/mail-active.svg") no-repeat;
+}
+
+nav.secondary {
   padding: 0rem 1.75rem 0rem 2rem;
 }
 @media only screen and (min-width: 38em) and (max-width: 60.625em) {
-  header.secondary nav {
+  nav.secondary {
     padding: 0.25rem 0.75rem 0.25rem 2rem;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 38em) {
-  header.secondary nav {
+  nav.secondary {
     padding: 0.25rem 0.75rem 0rem 1rem;
   }
 }
 @media only screen and (min-width: 95em) {
-  header.secondary nav {
+  nav.secondary {
     padding: 0 25%;
   }
 }
@@ -825,7 +845,7 @@ main {
 }
 .about .container-about .my-image {
   width: 2em;
-  flex: 1;
+  flex: 1.5;
   margin-left: 2em;
 }
 @media only screen and (min-width: 0) and (max-width: 60.625em) {

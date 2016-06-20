@@ -9,7 +9,7 @@ var ny = 80;
 var nz = 736;
 
 function setup() {
-   createCanvas(displayWidth, displayHeight);
+  createCanvas(displayWidth, displayHeight);
   background(50, 70, 130);
   stroke(215, 238, 133);
   strokeWeight(2);

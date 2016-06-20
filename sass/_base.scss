@@ -120,22 +120,46 @@ header {
     position: relative;
 	z-index: 10;
 	width: 100%;
-	nav {
+}
+
+header.primary {
+	height: 100vh;
+	@include break(0, 60.625em) {
+    	height: auto;
+    }
+}
+
+nav.primary {
+	    position: fixed;
+	    width: 100%;
+	    z-index: 500;
+	    top: 0;
 		background: $background-color-alpha;
 		display: flex;
 		flex-direction: row;
 		padding: 0 2rem;
 		@include break(0, 38em) {
 			padding: 0.25rem 0.75rem 0.25rem 1rem;
+			height: 2.5rem;
+		}
+		@include break(38em) {
+			height: 2.5rem;
 		}
 		@include break(95em) {
 			padding: 0 25%;
 		}
 		.menu-icon {
-			@include break(0, 60.625em) {
+			@include break(0, 38em) {
 				display: block;
 				.fa {
 					font-size: 2rem;
+					color: $dark-orange;
+				}
+			}
+			@include break(38em, 60.625em) {
+				display: block;
+				.fa {
+					font-size: 2.5rem;
 					color: $dark-orange;
 				}
 			}
@@ -148,7 +172,7 @@ header {
 			@include break(0, 60.625em) {
 				display: none;
 				position: absolute;
-    			top: 2.3em;
+    			top: 2.5rem;
     			left: 0;
     			width: 100%;
     			padding: 0.25rem 1rem 0.25rem 1rem;
@@ -216,30 +240,19 @@ header {
 			}
 		}
 	}
-}
 
-header.primary {
-	height: 100vh;
-	@include break(0, 60.625em) {
-    	height: auto;
-    }
-}
-
-header.secondary {
-	nav {
-		padding: 0rem 1.75rem 0rem 2rem;;
-		@include break(38em, 60.625em) {
-			padding: 0.25rem 0.75rem 0.25rem 2rem;
-		}
-		@include break(0, 38em) {
-			padding: 0.25rem 0.75rem 0rem 1rem;
-		}
-		@include break(95em) {
-			padding: 0 25%;
-		}
+nav.secondary {
+	padding: 0rem 1.75rem 0rem 2rem;;
+	@include break(38em, 60.625em) {
+		padding: 0.25rem 0.75rem 0.25rem 2rem;
+	}
+	@include break(0, 38em) {
+		padding: 0.25rem 0.75rem 0rem 1rem;
+	}
+	@include break(95em) {
+		padding: 0 25%;
 	}
 }
-
 
 .menu-secondary {
 	@include break(0, 60.625em) {
@@ -372,7 +385,7 @@ main {
 		}
 		.my-image {
 			width: 2em;
-			flex: 1;
+			flex: 1.5;
             margin-left: 2em;
             @include break(0, 60.625em) {
             	width: 100%;
